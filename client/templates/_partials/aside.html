@@ -30,25 +30,23 @@
     <a href="#">
         <i class="fa fa-dashboard"></i> <span>Projects</span> <i class="fa fa-angle-left pull-right"></i>
     </a>
-    <ul class="treeview-menu">
-        {{#each projects}}
-        <li>
-            <a href="#"><i class="fa fa-circle-o"></i> {{name}}</a> {{#if requirements}}
-            <ul class="treeview-menu">
-                {{#each requirements}}
-                <li>
-                    <a href="{{pathFor 'requirement' projectId=../id id=this.id}}">
-                        <i class="fa fa-circle-o"></i> {{requirementName}}
-                        <span class="label label-primary pull-right">{{tasks.length}} Tasks</span>
-                    </a>
-                </li>
-                {{/each}}
-            </ul>
-            {{/if}}
-        </li>
+                    <ul class="treeview-menu">
+                        {{#each projects}}
+                        <li>
+                            <a href="#"><i class="fa fa-circle-o"></i> {{name}}</a>
+                            <ul class="treeview-menu">
+                                <li>
+                                    <a href="{{pathFor 'requirement' id=_id}}">
+                                        <i class="fa fa-circle-o"></i> requirements
+                                        <span class="label label-primary pull-right">5 Tasks</span>
+                                    </a>
+                                </li>
+                            </ul>
+                            
+                        </li>
 
-        {{/each}}
-    </ul>
+                        {{/each}}
+                    </ul>
 </li>
                 <li class="treeview">
                     <a href="#">
