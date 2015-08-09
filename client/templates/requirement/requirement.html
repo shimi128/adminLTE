@@ -1,0 +1,13 @@
+﻿<template name="requirement">
+    <h1>{{requirementName}}</h1>
+    <ul>
+        {{#each tasks}}
+        <li>
+            <span>name: {{taskName}}</span> 
+        </li>
+        <li>
+            <span>Description: {{taskDascription}}</span>
+        </li>
+        {{/each}}
+    </ul>
+</template>
