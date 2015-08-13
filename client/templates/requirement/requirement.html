@@ -1,8 +1,13 @@
-﻿<template name="requirement">
-        {{#each requirements}}
-            <h1>name: {{name}}</h1>
-        {{/each}}
-  
+<template name="requirement">
+    <h1>{{projectName}}</h1> {{#each requirements}}
+    <ul>
+        <li>
+            <a href="{{pathFor 'tasks' id=projectId task=_id}}">{{name}}</a>
+        </li>
+    </ul>
+    {{/each}}
+
+
 
     <!--<h1>{{name}}</h1>
     <ul>
@@ -15,4 +20,18 @@
         </li>
         {{/each}}
     </ul>-->
+</template>
+<template name="tasks">
+    <h1>{{projectName}}</h1> {{#each requirements}}
+    <ul>
+        <li>
+             <a href="{{pathFor 'tasks' id=projectId task=_id}}">{{name}}</a>
+        </li>
+    </ul>
+    {{/each}}
+    <ul>
+        {{#each tasks}}
+        <li>{{name}}</li>
+        {{/each}}
+    </ul>
 </template>
