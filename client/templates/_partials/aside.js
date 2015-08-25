@@ -2,7 +2,7 @@ if (Meteor.isClient) {
     // This code only runs on the client
     Template.aside.helpers({
         projects: function () {
-            return Projects.find();
+            return Projects.find({});
         }
     });
 }
